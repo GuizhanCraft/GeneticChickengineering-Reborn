@@ -86,22 +86,23 @@ public final class PocketChickenUtils {
     /**
      * Captures a {@link Chicken} and returns a pocket chicken item.
      *
-     * @param entity
+     * @param chicken
      *     The {@link Chicken} to capture.
      *
      * @return The pocket chicken item.
      */
     @Nonnull
-    public static ItemStack capture(@Nonnull Chicken entity) {
-        JsonObject json = PocketChicken.ADAPTER.saveData(entity);
+    public static ItemStack capture(@Nonnull Chicken chicken) {
+        GeneticChickengineering.getIntegrationService().captureChicken(chicken);
+        JsonObject json = PocketChicken.ADAPTER.saveData(chicken);
         ItemStack item = GCEItems.POCKET_CHICKEN.clone();
         var db = GeneticChickengineering.getDatabaseService();
 
         DNA dna;
-        String uuid = entity.getUniqueId().toString();
+        String uuid = chicken.getUniqueId().toString();
 
-        if (entity.hasMetadata(Keys.METADATA)) {
-            String dnaStr = entity.getMetadata(Keys.METADATA).get(0).asString();
+        if (chicken.hasMetadata(Keys.METADATA)) {
+            String dnaStr = chicken.getMetadata(Keys.METADATA).get(0).asString();
             GeneticChickengineering.debug("captured chicken has meta data: {0}", dnaStr);
             dna = new DNA(dnaStr);
             db.removeChicken(uuid);
@@ -123,10 +124,7 @@ public final class PocketChickenUtils {
                 name = "";
             }
             String replace = "(" + ChickenTypes.getDisplayName(dna.getTyping()) + ")";
-            GeneticChickengineering.debug("chicken name before capture: {0}", name);
-            GeneticChickengineering.debug("replacing all string: {0}", replace);
             name = name.replace(replace, "");
-            GeneticChickengineering.debug("chicken name after replacing: {0}", name);
             if (name.isEmpty()) {
                 json.addProperty("_customName", (String) null);
                 json.addProperty("_customNameVisible", false);

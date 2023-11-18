@@ -35,11 +35,10 @@ public class ChickenNet extends SimpleSlimefunItem<EntityInteractHandler> implem
                 return;
             }
             Chicken chick = (Chicken) e.getRightClicked();
-            ItemStack pocketChicken = PocketChickenUtils.capture(chick);
             Location l = chick.getLocation().toCenterLocation();
+            ItemStack pocketChicken = PocketChickenUtils.capture(chick);
             l.getWorld().dropItemNaturally(l, pocketChicken);
             l.getWorld().playSound(l, Sound.ENTITY_CHICKEN_EGG, 1F, 1F);
-            chick.remove();
         };
     }
 

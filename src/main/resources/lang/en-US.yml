@@ -7,6 +7,8 @@ console:
     commands-fail: "Cannot initialize commands! Please report this to the developer!"
     database: "Loading database..."
     chickens: "Registered {0} chickens."
+    integrations: "Loading integrations..."
+    integration: "Detected {0}, initiating integration..."
   database:
     connect-fail: "Cannot connect to database!"
     connected: "Connected to database!"

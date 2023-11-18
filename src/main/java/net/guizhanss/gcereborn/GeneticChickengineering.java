@@ -18,6 +18,7 @@ import net.guizhanss.gcereborn.core.commands.GCECommand;
 import net.guizhanss.gcereborn.core.commands.GCECompleter;
 import net.guizhanss.gcereborn.core.services.ConfigurationService;
 import net.guizhanss.gcereborn.core.services.DatabaseService;
+import net.guizhanss.gcereborn.core.services.IntegrationService;
 import net.guizhanss.gcereborn.core.services.LocalizationService;
 import net.guizhanss.gcereborn.listeners.WorldSavedListener;
 import net.guizhanss.gcereborn.setup.Items;
@@ -34,12 +35,12 @@ public class GeneticChickengineering extends AbstractAddon {
     private ConfigurationService configService;
     private LocalizationService localization;
     private DatabaseService dbService;
+    private IntegrationService integrationService;
     private boolean debugEnabled = false;
 
     public GeneticChickengineering() {
         super("ybw0014", "GeneticChickengineering-Reborn", "master", "options.auto-update");
     }
-
 
     @Nonnull
     public static ConfigurationService getConfigService() {
@@ -54,6 +55,11 @@ public class GeneticChickengineering extends AbstractAddon {
     @Nonnull
     public static DatabaseService getDatabaseService() {
         return inst().dbService;
+    }
+
+    @Nonnull
+    public static IntegrationService getIntegrationService() {
+        return inst().integrationService;
     }
 
     public static void debug(@Nonnull String message, @Nonnull Object... args) {
@@ -131,6 +137,11 @@ public class GeneticChickengineering extends AbstractAddon {
             }
         }
 
+        // integrations
+        log(Level.INFO, localization.getString("console.load.integrations"));
+        integrationService = new IntegrationService(this);
+
+        // metrics
         setupMetrics();
     }
 
