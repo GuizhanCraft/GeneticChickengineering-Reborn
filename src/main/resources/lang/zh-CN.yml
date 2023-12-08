@@ -7,6 +7,8 @@ console:
     commands-fail: "无法初始化指令！请汇报给开发者！"
     database: "正在加载数据库..."
     chickens: "已注册 {0} 只鸡。"
+    integrations: "加载关联插件中..."
+    integration: "检测到 {0}，正在加载插件关联..."
   database:
     connect-fail: "无法连接到数据库！"
     connected: "已连接到数据库！"
