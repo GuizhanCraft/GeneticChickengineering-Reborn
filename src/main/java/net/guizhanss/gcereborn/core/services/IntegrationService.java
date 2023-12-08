@@ -4,13 +4,14 @@ import java.util.logging.Level;
 
 import javax.annotation.Nonnull;
 
+import com.bgsoftware.wildstacker.api.WildStackerAPI;
+
 import org.bukkit.entity.Chicken;
 
 import net.guizhanss.gcereborn.GeneticChickengineering;
 
 import lombok.Getter;
 import uk.antiperson.stackmob.StackMob;
-import uk.antiperson.stackmob.entity.StackEntity;
 
 @Getter
 public final class IntegrationService {
@@ -30,7 +31,6 @@ public final class IntegrationService {
         if (stackMobEnabled) {
             stackMobInst = (StackMob) plugin.getServer().getPluginManager().getPlugin("StackMob");
         }
-
     }
 
     private boolean isEnabled(@Nonnull String pluginName) {
@@ -43,14 +43,26 @@ public final class IntegrationService {
     }
 
     public void captureChicken(@Nonnull Chicken chicken) {
-        if (stackMobEnabled) {
-            StackEntity stackEntity = stackMobInst.getEntityManager().getStackEntity(chicken);
-            if (stackEntity != null && stackEntity.getSize() > 1) {
-                stackEntity.incrementSize(-1);
+        try {
+            if (stackMobEnabled) {
+                var stackEntity = stackMobInst.getEntityManager().getStackEntity(chicken);
+                if (stackEntity != null && stackEntity.getSize() > 1) {
+                    stackEntity.incrementSize(-1);
+                } else {
+                    chicken.remove();
+                }
+            } else if (wildStackerEnabled) {
+                var stackedEntity = WildStackerAPI.getStackedEntity(chicken);
+                if (stackedEntity != null && stackedEntity.getStackAmount() > 1) {
+                    stackedEntity.decreaseStackAmount(1, true);
+                } else {
+                    chicken.remove();
+                }
             } else {
                 chicken.remove();
             }
-        } else {
+        } catch (Exception e) {
+            GeneticChickengineering.log(Level.SEVERE, e, "An error has occurred while capturing chicken");
             chicken.remove();
         }
     }
