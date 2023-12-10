@@ -1,0 +1,167 @@
+console:
+  paper-only: "Plugin này cần một bản Paper để chạy ! Hãy sử dụng Paper hoặc các bản sao của nó thay cho Spigot."
+  load:
+    language: "Ngôn ngữ đã được tải: {0}"
+    items: "Đang tải các vật phẩm..."
+    researches: "Đang tải các nghiên cứu..."
+    commands-fail: "Không thể khởi tạo lệnh ! Vui lòng liên hệ với dev để fix !"
+    database: "Đang tải Cơ sở dữ liệu..."
+    chickens: "Đã tải {0} gà."
+    integrations: "Đang tải các mục tích hợp..."
+    integration: "Đã phát hiện {0}, đang khởi tạo mục tích hợp..."
+  database:
+    connect-fail: "Không thể kết nối với Cơ sở dữ liệu !"
+    connected: "Đã kết nối đến Cơ sở dữ liệu !"
+    not-connected: "Cơ sở dữ liệu không được kết nối ! Đang hủy tác vụ hiện tại."
+    exception: "Đã xảy ra lỗi SQLException khi thực hiện các mục SQL !"
+    cleanup: "Đã xóa {0} bản ghi gà cũ khỏi CSDL. Nó chết chưa vậy ?"
+categories:
+  ICON:
+    name: "&eGenetic Chickengineering"
+  DIRECTORY_ICON:
+    name: "&eDanh mục gà GCE"
+recipes:
+  from_net:
+    name: "&aMạng lưới gà"
+    lore:
+      - "&fBắt bằng một Mạng lưới gà,"
+      - "&fhoặc nhân giống trong một &eHợp tác xã Tư nhân."
+  from_chicken:
+    name: "&eBuồng kích thích"
+    lore:
+      - "&fLấy được từ &bGà bỏ túi,"
+      - "&ftrong một &eBuồng kích thích."
+items:
+  POCKET_CHICKEN:
+    name: "&bGà bỏ túi"
+    lore:
+      - "&7Chuột phải vào một khối"
+      - "&7để thả gà ra."
+  CHICKEN_NET:
+    name: "&aMạng lưới gà"
+    lore:
+      - "&7Làm gà có thể mang đi."
+  WATER_EGG:
+    name: "&9Trứng nước"
+    lore:
+      - "&7Chứa nước."
+  LAVA_EGG:
+    name: "&cTrứng dung nham"
+    lore:
+      - "&7Chứa dung nham."
+  GENETIC_SEQUENCER:
+    name: "&eTrình tự Gene"
+    lore:
+      - "&7Dùng để xác định kiểu gene của gà."
+  EXCITATION_CHAMBER:
+    name: "&eBuồng kích thích"
+    lore:
+      - "&7Cho phép gà sản xuất tài nguyên."
+  EXCITATION_CHAMBER_2:
+    name: "&eBuồng kích thích Tăng cường"
+    lore:
+      - "&7Cho phép gà sản xuất tài nguyên"
+      - "&7nhanh hơn."
+  EXCITATION_CHAMBER_3:
+    name: "&eBuồng kích thích Siêu cấp"
+    lore:
+      - "&7Cho phép gà sản xuất tài nguyên"
+      - "&7nhanh hơn nhiều."
+  PRIVATE_COOP:
+    name: "&eHợp tác xã Tư nhân"
+    lore:
+      - "&7Có thể bảo quản gà."
+  RESTORATION_CHAMBER:
+    name: "&ePhòng phục hồi"
+    lore:
+      - "&7Có thể chữa lành gà."
+lores:
+  right-click-to-use: "&eNhấp Chuột phải&7 để dùng"
+  chicken:
+    health: "&7Máu: &e{0}"
+    name: "&7Tên: &e{0}"
+    on-fire: "&7Đang cháy: &e\u2713"
+    baby: "&7Bé: &e\u2713"
+    status:
+      line: "&7Trạng thái: &e{0}"
+      healthy: "&aKhỏe mạnh"
+      exhausted: "&4Kiệt sức"
+      fatigued: "&eMệt mỏi"
+    dna: "&7DNA: &e{0}"
+    type: "&7Loại: &e{0} &eChicken"
+products:
+  FEATHER: "Lông vũ"
+  BONE: "Xương"
+  COBBLESTONE: "Đá cuội"
+  DIRT: "Đất"
+  FLINT: "Đá lửa"
+  SAND: "Cát"
+  WATER: "Nước"
+  COAL: "Than"
+  STRING: "Chuỗi"
+  LEATHER: "Da thú"
+  SUGAR: "Đường"
+  SPONGE: "Bọt Biển"
+  DIORITE: "Diorite"
+  ANDESITE: "Đá andesite"
+  GRAVEL: "Sỏi"
+  ICE: "Băng"
+  GRANITE: "Đá granit"
+  CLAY: "Đất sét"
+  OAK_LOG: "Gỗ sồi"
+  GUNPOWDER: "Thuốc súng"
+  KELP: "Tảo Bẹ"
+  SLIME_BALL: "Bóng slime"
+  GOLD: "Vàng"
+  NETHERRACK: "Netherrack"
+  GLASS: "Thủy tinh"
+  LAPIS: "Lapis"
+  IRON: "Sắt"
+  IRON_DUST: "Bụi sắt"
+  GOLD_DUST: "Bụi vàng"
+  SILVER_DUST: "Bụi bạc"
+  ZINC_DUST: "Bụi kẽm"
+  CAKE: "Bánh"
+  OBSIDIAN: "Hắc diện thạch"
+  COPPER_DUST: "Bụi đồng"
+  MAGNESIUM_DUST: "Bụi magiê"
+  LAVA: "Dung nham"
+  TIN_DUST: "Bụi thiếc"
+  SNOWBALL: "Bóng tuyết"
+  REDSTONE: "Đá đỏ"
+  CACTUS: "Xương rồng"
+  ALUMINUM_DUST: "Bụi nhôm"
+  LEAD_DUST: "Bụi chì"
+  BLACKSTONE: "Đá đen"
+  SOUL_SOIL: "Đất Linh hồn"
+  BLAZE_ROD: "Que Quỷ lửa"
+  GHAST_TEAR: "Nước mắt Ghast"
+  SULFATE: "Sulfate"
+  SHROOMLIGHT: "Ánh sáng lung linh"
+  QUARTZ: "Thạch anh"
+  BASALT: "Đá badan"
+  CRYING_OBSIDIAN: "Hắc hiện thạch Khóc"
+  SOUL_SAND: "Cát Linh hồn"
+  ENDER_PEARL: "Ender Pearl"
+  NETHER_WART: "Bướu Nether"
+  PHANTOM_MEMBRANE: "Phantom Membrane"
+  MAGMA_CREAM: "Kem Magma"
+  GLOWSTONE_DUST: "Bụi Đá phát sáng"
+  DIAMOND: "Kim cương"
+  END_STONE: "Đá End"
+  PRISMARINE_CRYSTALS: "Tinh thể Prismarine"
+  PRISMARINE_SHARD: "Mảnh Prismarine"
+  EXPERIENCE: "Kinh nghiệm"
+  EMERALD: "Ngọc lục bảo"
+  NETHERITE: "Netherite"
+commands:
+  calcchance:
+    description: "&fTính khả năng có được một con gà với 2 DNA bố mẹ và DNA con đã cho."
+  makechicken:
+    description: "&fTạo một con gà với vật phẩm DNA đã cho."
+messages:
+  no-permission: "&cBạn không có quyền !"
+  no-console: "&cBạn phải là người chơi để làm điều này !"
+  usage: "&bCách dùng: &e{0}"
+  invalid-dna-notation: "&cKý hiệu DNA không phù hợp: {0}"
+  chance-result: "&eCó &b{0}% &ecơ hội cho bố mẹ 1 ({1}) và bố mẹ 2 ({2}) để có một con ({3})."
