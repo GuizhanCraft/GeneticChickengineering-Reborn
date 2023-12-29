@@ -1,0 +1,167 @@
+console:
+  paper-only: "このプラグインを実行するにはPaperが必要です。Spigotの代わりにPaper、もしくはそのフォークを使用してください。"
+  load:
+    language: "現在読み込まれた言語：{0}"
+    items: "アイテムを読み込み中…"
+    researches: "リサーチを読み込み中…"
+    commands-fail: "コマンドを初期化できません！開発者に報告してください！"
+    database: "データベースを読み込み中…"
+    chickens: "鶏を{0}羽登録しました。"
+    integrations: "インテグレーションを読み込み中..."
+    integration: "{0}を発見しました。インテグレーション初期化中…"
+  database:
+    connect-fail: "データベースに接続できません！"
+    connected: "データベースに接続しました！"
+    not-connected: "データベースに接続されていません！現在のオペレーションを中止します。"
+    exception: "SQL文の実行中にエラーが発生しました！"
+    cleanup: "{0}つの古い鶏レコードを削除しました。すでに死んだんですか。"
+categories:
+  ICON:
+    name: "&eGenetic Chickengineering"
+  DIRECTORY_ICON:
+    name: "&eGCE産品"
+recipes:
+  from_net:
+    name: "&a補鶏網"
+    lore:
+      - "&a補鶏網&fで捕まえ、または"
+      - "&e鶏小屋&fで飼育する。"
+  from_chicken:
+    name: "&e鼓舞室"
+    lore:
+      - "&e鼓舞室&fの中の&bポケット鶏&fから"
+      - "&f獲得できます。"
+items:
+  POCKET_CHICKEN:
+    name: "&bポケット鶏"
+    lore:
+      - "&7ブロックを右クリックして"
+      - "&7鶏を解放します。"
+  CHICKEN_NET:
+    name: "&a補鶏網"
+    lore:
+      - "&7鶏をポータブルにします。"
+  WATER_EGG:
+    name: "&9水の卵"
+    lore:
+      - "&7水が入っています。"
+  LAVA_EGG:
+    name: "&c溶岩の卵"
+    lore:
+      - "&7溶岩が入っています。"
+  GENETIC_SEQUENCER:
+    name: "&e遺伝子シーケンサー"
+    lore:
+      - "&7鶏の遺伝子型を確定するために使用されます。"
+  EXCITATION_CHAMBER:
+    name: "&e鼓舞室"
+    lore:
+      - "&7鶏を使用して資源を生産できます。"
+  EXCITATION_CHAMBER_2:
+    name: "&e迅速な鼓舞室"
+    lore:
+      - "&7鶏を使用して資源をより早く"
+      - "&7生産できます。"
+  EXCITATION_CHAMBER_3:
+    name: "&e究極の鼓舞室"
+    lore:
+      - "&7鶏を使用して資源をより一層早く"
+      - "&7生産できます。"
+  PRIVATE_COOP:
+    name: "&e鶏小屋"
+    lore:
+      - "&7鶏を保管できます。"
+  RESTORATION_CHAMBER:
+    name: "&e休息室"
+    lore:
+      - "&7鶏を回復できます。"
+lores:
+  right-click-to-use: "&e右クリック&7で使用する"
+  chicken:
+    health: "&7体力：&e{0}"
+    name: "&7名前：&e{0}"
+    on-fire: "&7炎上：&e\u2713"
+    baby: "&7子供：&e\u2713"
+    status:
+      line: "&7状態：&e{0}"
+      healthy: "&a健康"
+      exhausted: "&4疲れ果てている"
+      fatigued: "&e疲れている"
+    dna: "&7DNA：&e{0}"
+    type: "&7種類：&e{0}&e鶏"
+products:
+  FEATHER: "羽根"
+  BONE: "骨"
+  COBBLESTONE: "丸石"
+  DIRT: "土"
+  FLINT: "火打石"
+  SAND: "砂"
+  WATER: "水"
+  COAL: "石炭"
+  STRING: "糸"
+  LEATHER: "革"
+  SUGAR: "砂糖"
+  SPONGE: "スポンジ"
+  DIORITE: "閃緑岩"
+  ANDESITE: "安山岩"
+  GRAVEL: "砂利"
+  ICE: "氷"
+  GRANITE: "花崗岩"
+  CLAY: "粘土"
+  OAK_LOG: "オークの原木"
+  GUNPOWDER: "火薬"
+  KELP: "コンブ"
+  SLIME_BALL: "スライムボール"
+  GOLD: "金"
+  NETHERRACK: "ネザーラック"
+  GLASS: "ガラス"
+  LAPIS: "ラピスラズリ"
+  IRON: "鉄"
+  IRON_DUST: "鉄粉"
+  GOLD_DUST: "金粉"
+  SILVER_DUST: "銀粉"
+  ZINC_DUST: "亜鉛粉"
+  CAKE: "ケーキ"
+  OBSIDIAN: "黒曜石"
+  COPPER_DUST: "銅粉"
+  MAGNESIUM_DUST: "マグネシウム粉"
+  LAVA: "溶岩"
+  TIN_DUST: "錫粉"
+  SNOWBALL: "雪玉"
+  REDSTONE: "レッドストーン"
+  CACTUS: "サボテン"
+  ALUMINUM_DUST: "アルミニウム粉"
+  LEAD_DUST: "鉛粉"
+  BLACKSTONE: "ブラックストーン"
+  SOUL_SOIL: "ソウルソイル"
+  BLAZE_ROD: "ブレイズロッド"
+  GHAST_TEAR: "ガストの涙"
+  SULFATE: "硫酸塩"
+  SHROOMLIGHT: "シュルームライト"
+  QUARTZ: "クォーツ"
+  BASALT: "玄武岩"
+  CRYING_OBSIDIAN: "泣く黒曜石"
+  SOUL_SAND: "ソウルサンド"
+  ENDER_PEARL: "エンダーパール"
+  NETHER_WART: "ネザーウォート"
+  PHANTOM_MEMBRANE: "ファントムの皮膜"
+  MAGMA_CREAM: "マグマクリーム"
+  GLOWSTONE_DUST: "グロウストーンダスト"
+  DIAMOND: "ダイヤモンド"
+  END_STONE: "エンドストーン"
+  PRISMARINE_CRYSTALS: "プリズマリンクリスタル"
+  PRISMARINE_SHARD: "プリズマリンの欠片"
+  EXPERIENCE: "経験値"
+  EMERALD: "エメラルド"
+  NETHERITE: "ネザライト"
+commands:
+  calcchance:
+    description: "&f両親のDNAで子供のDNAを持つ鶏を得る確率を計算します。"
+  makechicken:
+    description: "&f指定されたDNAを持つ鶏を作ります。"
+messages:
+  no-permission: "&c権限がありません！"
+  no-console: "&cこの作用はプレイヤーしかできません！"
+  usage: "&b使い方：&e{0}"
+  invalid-dna-notation: "&c無効なDNA表記：{0}"
+  chance-result: "&e「{1}」と「{2}」の間には&b{0}%の確率で「{3}」ができます"
