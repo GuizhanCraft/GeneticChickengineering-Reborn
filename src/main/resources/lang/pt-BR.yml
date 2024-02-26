@@ -1,0 +1,167 @@
+console:
+  paper-only: "Este plugin requer Paper para funcionar! Use Paper ou seus forks em vez da Spigot."
+  load:
+    language: "Idioma carregado: {0}"
+    items: "Carregando itens..."
+    researches: "Carregando pesquisas..."
+    commands-fail: "Não é possível inicializar comandos! Por favor informe isto ao desenvolvedor!"
+    database: "Carregando banco de dados..."
+    chickens: "{0} galinhas registradas."
+    integrations: "Carregando Integrações..."
+    integration: "Detectado {0}, iniciando integração..."
+  database:
+    connect-fail: "Não foi possível conectar ao banco de dados"
+    connected: "Conectado ao banco de dados!"
+    not-connected: "Banco de dados não conectado! Cancelando a operação atual."
+    exception: "Ocorreu um SQLException ao executar entradas SQL!"
+    cleanup: "Removido {0} registros de galinhas do banco de dados. Eles morreram?"
+categories:
+  ICON:
+    name: "&eGenetic Chickengineering"
+  DIRECTORY_ICON:
+    name: "&eGCE Chicken Directory"
+recipes:
+  from_net:
+    name: "&aRede de Galinha"
+    lore:
+      - "&fCapture com uma &aRede de Galinha,"
+      - "&fou crie em uma &eCópula Privada."
+  from_chicken:
+    name: "&eCâmara de Excitação"
+    lore:
+      - "&fObtido de uma &bPocket Chicken,"
+      - "&fem uma &eCâmera de Excitação."
+items:
+  POCKET_CHICKEN:
+    name: "&bBolsa de Galinha"
+    lore:
+      - "&7Clique com o botão direito em um bloco"
+      - "&7para liberar a galinha."
+  CHICKEN_NET:
+    name: "&aRede de Galinha"
+    lore:
+      - "&7Fazer uma galinha portátil."
+  WATER_EGG:
+    name: "&9Ovo de Água"
+    lore:
+      - "&7Contém água."
+  LAVA_EGG:
+    name: "&cOvo de Lava"
+    lore:
+      - "&7Contém lava."
+  GENETIC_SEQUENCER:
+    name: "&eSequenciador Genético"
+    lore:
+      - "&7Usado para determinar o genótipo de uma galinha."
+  EXCITATION_CHAMBER:
+    name: "&eCâmara de Excitação"
+    lore:
+      - "&7Permite que as galinhas produzam recursos."
+  EXCITATION_CHAMBER_2:
+    name: "&eCâmara de Excitação Melhorada"
+    lore:
+      - "&7Permite que as galinhas produzam recursos"
+      - "&7mais rápido."
+  EXCITATION_CHAMBER_3:
+    name: "&eUltimate Câmara de Excitação"
+    lore:
+      - "&7Permite que as galinhas produzam recursos"
+      - "&7muito mais rápido."
+  PRIVATE_COOP:
+    name: "&eCópula Privada"
+    lore:
+      - "&7Pode armazenar galinhas."
+  RESTORATION_CHAMBER:
+    name: "&eCâmara de Restauração"
+    lore:
+      - "&7Pode curar galinhas."
+lores:
+  right-click-to-use: "&eBotão Direito&7 para usar"
+  chicken:
+    health: "&7Vida: &e{0}"
+    name: "&7Nome: &e{0}"
+    on-fire: "&7Sobre o Fogo: &e\u2713"
+    baby: "&7Bebê: &e\u2713"
+    status:
+      line: "&7Status: &e{0}"
+      healthy: "&aSaudável"
+      exhausted: "&4Exausto"
+      fatigued: "&eFatigado"
+    dna: "&7DNA: &e{0}"
+    type: "&7Tipo: &e{0} &eGalinha"
+products:
+  FEATHER: "Pena"
+  BONE: "Osso"
+  COBBLESTONE: "Pedregulho"
+  DIRT: "Terra"
+  FLINT: "Sílex"
+  SAND: "Areia"
+  WATER: "Água"
+  COAL: "Carvão"
+  STRING: "Linha"
+  LEATHER: "Couro"
+  SUGAR: "Açúcar"
+  SPONGE: "Esponja"
+  DIORITE: "Diorito"
+  ANDESITE: "Andesito"
+  GRAVEL: "Cascalho"
+  ICE: "Gelo"
+  GRANITE: "Granito"
+  CLAY: "Argila"
+  OAK_LOG: "Tronco de Carvalho"
+  GUNPOWDER: "Pólvora"
+  KELP: "Alga"
+  SLIME_BALL: "Bola de slime"
+  GOLD: "Ouro"
+  NETHERRACK: "Netherrack"
+  GLASS: "Vidro"
+  LAPIS: "Lápis-lazúli"
+  IRON: "Ferro"
+  IRON_DUST: "Pó de Ferro"
+  GOLD_DUST: "Pó de Ouro"
+  SILVER_DUST: "Pó de Prata"
+  ZINC_DUST: "Pó de Zinco"
+  CAKE: "Bolo"
+  OBSIDIAN: "Obsidiana"
+  COPPER_DUST: "Pó de Cobre"
+  MAGNESIUM_DUST: "Pó de Magnésio"
+  LAVA: "Lava"
+  TIN_DUST: "Pó de Estanho"
+  SNOWBALL: "Bola de Neve"
+  REDSTONE: "Redstone"
+  CACTUS: "Cacto"
+  ALUMINUM_DUST: "Pó de Alumínio"
+  LEAD_DUST: "Pó de Chumbo"
+  BLACKSTONE: "Pedra-Negra"
+  SOUL_SOIL: "Terra da Alma"
+  BLAZE_ROD: "Vara de Blaze"
+  GHAST_TEAR: "Lágrima de ghast"
+  SULFATE: "Sulfato"
+  SHROOMLIGHT: "Cogubrilho"
+  QUARTZ: "Quartzo do Nether"
+  BASALT: "Basalto"
+  CRYING_OBSIDIAN: "Obsidiana Chorona"
+  SOUL_SAND: "Areia das Almas"
+  ENDER_PEARL: "Pérola do ender"
+  NETHER_WART: "Fungo do Nether"
+  PHANTOM_MEMBRANE: "Membrana de Phantom"
+  MAGMA_CREAM: "Creme de Magma"
+  GLOWSTONE_DUST: "Pó de Pedra Luminosa"
+  DIAMOND: "Diamante"
+  END_STONE: "Pedra do End"
+  PRISMARINE_CRYSTALS: "Cristais de Prismarinho"
+  PRISMARINE_SHARD: "Fragmento de Prismarinho"
+  EXPERIENCE: "Experiência"
+  EMERALD: "Esmeralda"
+  NETHERITE: "Netherita"
+commands:
+  calcchance:
+    description: "&fCalcule a chance de obter uma galinha com os dois DNAs dos pais e o DNA do filho fornecido."
+  makechicken:
+    description: "&fCria um item de galinha com o DNA fornecido."
+messages:
+  no-permission: "&cVocê não tem permissão!"
+  no-console: "&cVocê precisa ser um jogador para fazer isso!"
+  usage: "&bUse: &e{0}"
+  invalid-dna-notation: "&cNotação de DNA inválida: {0}"
+  chance-result: "&eHá uma chance de &b{0}% &epara o pai 1 ({1}) e pai 2 ({2}) terem um filho ({3})."
