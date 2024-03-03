@@ -25,54 +25,54 @@ recipes:
     name: "&aMạng lưới gà"
     lore:
       - "&fBắt bằng một Mạng lưới gà,"
-      - "&fhoặc nhân giống trong một &eHợp tác xã Tư nhân."
+      - "&frồi nhân giống trong một &eChuồng Gà Riêng."
   from_chicken:
-    name: "&eBuồng kích thích"
+    name: "&eBuồng Kích Thích"
     lore:
-      - "&fLấy được từ &bGà bỏ túi,"
+      - "&fLấy được từ &bGà Bỏ Túi"
       - "&ftrong một &eBuồng kích thích."
 items:
   POCKET_CHICKEN:
-    name: "&bGà bỏ túi"
+    name: "&bGà Bỏ Túi"
     lore:
       - "&7Chuột phải vào một khối"
       - "&7để thả gà ra."
   CHICKEN_NET:
-    name: "&aMạng lưới gà"
+    name: "&aLưới Bắt Gà"
     lore:
       - "&7Làm gà có thể mang đi."
   WATER_EGG:
-    name: "&9Trứng nước"
+    name: "&9Trứng Nước"
     lore:
       - "&7Chứa nước."
   LAVA_EGG:
-    name: "&cTrứng dung nham"
+    name: "&cTrứng Dung Nham"
     lore:
       - "&7Chứa dung nham."
   GENETIC_SEQUENCER:
-    name: "&eTrình tự Gene"
+    name: "&eMáy Xếp Trình Tự Gene"
     lore:
       - "&7Dùng để xác định kiểu gene của gà."
   EXCITATION_CHAMBER:
-    name: "&eBuồng kích thích"
+    name: "&eBuồng Kích Thích"
     lore:
       - "&7Cho phép gà sản xuất tài nguyên."
   EXCITATION_CHAMBER_2:
-    name: "&eBuồng kích thích Tăng cường"
+    name: "&eBuồng Kích Thích Tăng Cường"
     lore:
       - "&7Cho phép gà sản xuất tài nguyên"
       - "&7nhanh hơn."
   EXCITATION_CHAMBER_3:
-    name: "&eBuồng kích thích Siêu cấp"
+    name: "&eBuồng Kích Thích Siêu cấp"
     lore:
       - "&7Cho phép gà sản xuất tài nguyên"
       - "&7nhanh hơn nhiều."
   PRIVATE_COOP:
-    name: "&eHợp tác xã Tư nhân"
+    name: "&eChuồng Gà Riêng"
     lore:
-      - "&7Có thể bảo quản gà."
+      - "&7Có thể chứa gà."
   RESTORATION_CHAMBER:
-    name: "&ePhòng phục hồi"
+    name: "&eBuồng Phục Hồi"
     lore:
       - "&7Có thể chữa lành gà."
 lores:
