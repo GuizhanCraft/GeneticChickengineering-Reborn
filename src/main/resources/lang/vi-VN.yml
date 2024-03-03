@@ -22,7 +22,7 @@ categories:
     name: "&eDanh mục gà GCE"
 recipes:
   from_net:
-    name: "&aMạng lưới gà"
+    name: "&aLưới Bắt Gà"
     lore:
       - "&fBắt bằng một Mạng lưới gà,"
       - "&frồi nhân giống trong một &eChuồng Gà Riêng."
