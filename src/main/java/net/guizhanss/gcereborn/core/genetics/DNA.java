@@ -13,16 +13,15 @@ import lombok.experimental.Accessors;
 public class DNA {
     @Getter
     @Accessors(fluent = true)
-    private static final char[] ALLELES = new char[] { 'b', 'c', 'd', 'f', 's', 'w' };
-    private static final boolean[] BOOL_CAST = new boolean[] { false, true };
+    private static final char[] ALLELES = new char[] {'b', 'c', 'd', 'f', 's', 'w'};
+    private static final boolean[] BOOL_CAST = new boolean[] {false, true};
     private final Gene[] sequence;
     private boolean learned;
 
     /**
      * Load DNA from state.
      *
-     * @param state
-     *     int[] of length 7, first 6 are alleles, last is learned
+     * @param state int[] of length 7, first 6 are alleles, last is learned
      */
     public DNA(int[] state) {
         // Load DNA from state
@@ -36,8 +35,7 @@ public class DNA {
     /**
      * Load DNA from state.
      *
-     * @param state
-     *     String of length 7, first 6 are alleles, last is learned
+     * @param state String of length 7, first 6 are alleles, last is learned
      */
     public DNA(@Nonnull String state) {
         // Load DNA from a String state
@@ -52,8 +50,7 @@ public class DNA {
     /**
      * Load DNA from a chicken type.
      *
-     * @param typing
-     *     The chicken type, which contains the state information.
+     * @param typing The chicken type, which contains the state information.
      */
     public DNA(int typing) {
         this.sequence = new Gene[6];
@@ -69,16 +66,14 @@ public class DNA {
     /**
      * Load DNA from 2 parents' alleles.
      *
-     * @param half1
-     *     The first parent's alleles
-     * @param half2
-     *     The second parent's alleles.
+     * @param half1 The first parent's alleles
+     * @param half2 The second parent's alleles.
      */
     public DNA(char[] half1, char[] half2) {
         // New DNA from two parent halves
         this.sequence = new Gene[6];
         for (int i = 0; i < 6; i++) {
-            this.sequence[i] = new Gene(new char[] { half1[i], half2[i] });
+            this.sequence[i] = new Gene(new char[] {half1[i], half2[i]});
         }
         this.learned = false;
     }
@@ -86,13 +81,12 @@ public class DNA {
     /**
      * Load DNA from notation.
      *
-     * @param notation
-     *     The notation of the DNA, should be 12 long and only contain alleles
+     * @param notation The notation of the DNA, should be 12 long and only contain alleles
      */
     public DNA(char[] notation) {
         this.sequence = new Gene[6];
         for (int i = 0; i < 6; i++) {
-            this.sequence[i] = new Gene(new char[] { notation[2 * i], notation[2 * i + 1] });
+            this.sequence[i] = new Gene(new char[] {notation[2 * i], notation[2 * i + 1]});
         }
         this.learned = true;
     }
@@ -108,7 +102,7 @@ public class DNA {
 
         for (int i = 0; i < 6; i++) {
             char notation = Character.toUpperCase(ALLELES[i]);
-            char[] markup = { notation, notation };
+            char[] markup = {notation, notation};
             // If this index was in the ones randomly chosen,
             // This allele is heterozygous
             final int z = i;

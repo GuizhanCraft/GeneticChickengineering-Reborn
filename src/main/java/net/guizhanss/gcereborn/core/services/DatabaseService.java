@@ -95,9 +95,7 @@ public final class DatabaseService {
      * Get the chicken DNA.
      * Make sure you have called {@link #hasChicken(String)} to check if chicken exists first.
      *
-     * @param uuid
-     *     The uuid of the chicken.
-     *
+     * @param uuid The uuid of the chicken.
      * @return The chicken DNA.
      */
     @Nullable

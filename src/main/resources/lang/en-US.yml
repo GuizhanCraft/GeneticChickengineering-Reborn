@@ -36,6 +36,9 @@ recipes:
 
 items:
   POCKET_CHICKEN:
+    conditions:
+      match-name: true
+      match-lore: true
     name: "&bPocket Chicken"
     lore:
       - "&7Right click on a block"

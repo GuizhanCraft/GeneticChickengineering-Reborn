@@ -150,8 +150,15 @@
         <dependency>
             <groupId>net.guizhanss</groupId>
             <artifactId>GuizhanLib-api</artifactId>
-            <version>1.6.1</version>
+            <version>1.7.6</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>SlimefunTranslation</artifactId>
+            <version>4d42472a0e</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

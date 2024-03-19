@@ -73,8 +73,8 @@ public class RestorationChamber extends AbstractMachine {
         var healRate = GeneticChickengineering.getConfigService().getHealRate();
         MachineRecipe recipe = new MachineRecipe(
             config.isTest() ? 1 : healRate * toConsume,
-            new ItemStack[] { recipeSeeds, chicken.clone() },
-            new ItemStack[] { recipeChick }
+            new ItemStack[] {recipeSeeds, chicken.clone()},
+            new ItemStack[] {recipeChick}
         );
         if (!InvUtils.fitAll(menu.toInventory(), recipe.getOutput(), getOutputSlots())) {
             return null;

@@ -38,9 +38,7 @@ public final class PocketChickenUtils {
     /**
      * Determine whether an {@link ItemStack} is a {@link PocketChicken}.
      *
-     * @param item
-     *     The {@link ItemStack} to check.
-     *
+     * @param item The {@link ItemStack} to check.
      * @return Whether the {@link ItemStack} is a {@link PocketChicken}.
      */
     public boolean isPocketChicken(@Nonnull ItemStack item) {
@@ -86,9 +84,7 @@ public final class PocketChickenUtils {
     /**
      * Captures a {@link Chicken} and returns a pocket chicken item.
      *
-     * @param chicken
-     *     The {@link Chicken} to capture.
-     *
+     * @param chicken The {@link Chicken} to capture.
      * @return The pocket chicken item.
      */
     @Nonnull
@@ -140,11 +136,8 @@ public final class PocketChickenUtils {
     /**
      * Try to breed two chicken.
      *
-     * @param chick1
-     *     The first chicken.
-     * @param chick2
-     *     The second chicken.
-     *
+     * @param chick1 The first chicken.
+     * @param chick2 The second chicken.
      * @return The resulting baby chicken, or null if breeding failed.
      */
     @Nullable
@@ -166,8 +159,7 @@ public final class PocketChickenUtils {
     /**
      * Creates a display item for the given product in the dictionary.
      *
-     * @param typing
-     *     The type of chicken.
+     * @param typing The type of chicken.
      */
     public static void createProductDisplay(int typing) {
         ItemStack fake = GCEItems.POCKET_CHICKEN.clone();
@@ -201,9 +193,7 @@ public final class PocketChickenUtils {
     /**
      * Create a fresh new chicken based on the DNA.
      *
-     * @param dna
-     *     The DNA to use.
-     *
+     * @param dna The DNA to use.
      * @return The new chicken item.
      */
     @Nonnull
@@ -225,9 +215,7 @@ public final class PocketChickenUtils {
      * Returns a number which reflects the number of homozygous dominant alleles in a chicken.
      * This is used to give a boosted rate to resource production from chickens which are "pure".
      *
-     * @param chicken
-     *     The chicken {@link ItemStack}.
-     *
+     * @param chicken The chicken {@link ItemStack}.
      * @return The DNA strength.
      */
     public static int getDNAStrength(@Nonnull ItemStack chicken) {
@@ -345,9 +333,7 @@ public final class PocketChickenUtils {
     /**
      * Determines whether the chicken is an adult.
      *
-     * @param chicken
-     *     The chicken {@link ItemStack}.
-     *
+     * @param chicken The chicken {@link ItemStack}.
      * @return Whether the chicken is an adult.
      */
     public boolean isAdult(@Nonnull ItemStack chicken) {
@@ -361,9 +347,7 @@ public final class PocketChickenUtils {
     /**
      * Determines whether the DNA of chicken is known.
      *
-     * @param chicken
-     *     The chicken {@link ItemStack}.
-     *
+     * @param chicken The chicken {@link ItemStack}.
      * @return Whether the DNA is known.
      */
     public boolean isLearned(@Nonnull ItemStack chicken) {
@@ -374,9 +358,7 @@ public final class PocketChickenUtils {
     /**
      * Learn the DNA of a chicken. This returns a new {@link ItemStack} with known DNA.
      *
-     * @param chicken
-     *     The chicken {@link ItemStack}.
-     *
+     * @param chicken The chicken {@link ItemStack}.
      * @return The new chicken {@link ItemStack}.
      */
     @Nonnull

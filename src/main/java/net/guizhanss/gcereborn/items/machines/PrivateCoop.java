@@ -97,8 +97,8 @@ public class PrivateCoop extends AbstractMachine {
         }
         MachineRecipe recipe = new MachineRecipe(
             config.isTest() ? 1 : 60,
-            new ItemStack[] { parents.get(0), parents.get(1) },
-            new ItemStack[] { baby }
+            new ItemStack[] {parents.get(0), parents.get(1)},
+            new ItemStack[] {baby}
         );
         Inventory inv = menu.toInventory();
 

@@ -49,7 +49,7 @@ public class CalcChanceCommand extends SubCommand implements DnaCompletion {
             double matches = 0.0;
             for (char p1a : p1g.getAlleles()) {
                 for (char p2a : p2g.getAlleles()) {
-                    if (new Gene(new char[] { p1a, p2a }).getState() == cg.getState()) {
+                    if (new Gene(new char[] {p1a, p2a}).getState() == cg.getState()) {
                         matches += 1.0;
                     }
                 }

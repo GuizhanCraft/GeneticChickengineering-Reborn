@@ -91,7 +91,7 @@ public class GeneticChickengineering extends AbstractAddon {
         // localization
         log(Level.INFO, "Loading language...");
         String lang = configService.getLang();
-        localization = new LocalizationService(this);
+        localization = new LocalizationService(this, getFile());
         localization.addLanguage(lang);
         if (!lang.equals(DEFAULT_LANG)) {
             localization.addLanguage(DEFAULT_LANG);
@@ -159,7 +159,7 @@ public class GeneticChickengineering extends AbstractAddon {
 
     @Override
     protected void autoUpdate() {
-        if (getPluginVersion().startsWith("DEV")) {
+        if (getPluginVersion().startsWith("Dev")) {
             new BlobBuildUpdater(this, getFile(), getGithubRepo()).start();
         } else if (getPluginVersion().startsWith("Build")) {
             try {

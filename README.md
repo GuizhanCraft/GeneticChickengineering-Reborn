@@ -6,6 +6,8 @@ Rewritten by ybw0014.
 
 ## Download
 
+[Blob Builds](https://blob.build/project/GeneticChickengineering-Reborn)
+
 [![Build Status](https://builds.guizhanss.com/ybw0014/GeneticChickengineering-Reborn/master/badge.svg)](https://builds.guizhanss.com/ybw0014/GeneticChickengineering-Reborn/master)
 
 ## Overview

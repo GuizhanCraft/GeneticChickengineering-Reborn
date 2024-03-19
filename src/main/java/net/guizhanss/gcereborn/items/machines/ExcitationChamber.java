@@ -36,10 +36,10 @@ public class ExcitationChamber extends AbstractMachine {
         18, 19, 20, 21, 23, 24,
         25, 26
     };
-    private static final int[] INPUT_BORDER = new int[] { 3, 5, 12, 13, 14 };
-    private static final int[] OUTPUT_BORDER = new int[] { 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 44 };
-    private static final int[] INPUT_SLOTS = new int[] { 4 };
-    private static final int[] OUTPUT_SLOTS = new int[] { 37, 38, 39, 40, 41, 42, 43 };
+    private static final int[] INPUT_BORDER = new int[] {3, 5, 12, 13, 14};
+    private static final int[] OUTPUT_BORDER = new int[] {27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 44};
+    private static final int[] INPUT_SLOTS = new int[] {4};
+    private static final int[] OUTPUT_SLOTS = new int[] {37, 38, 39, 40, 41, 42, 43};
     private static final int INFO_SLOT = 22;
 
     public ExcitationChamber(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -132,8 +132,8 @@ public class ExcitationChamber extends AbstractMachine {
             int speed = (config.getResourceBaseTime() + PocketChickenUtils.getResourceTier(chicken) - 2 * PocketChickenUtils.getDNAStrength(chicken)) / getSpeed();
             MachineRecipe recipe = new MachineRecipe(
                 config.isTest() ? 1 : speed,
-                new ItemStack[] { chicken },
-                new ItemStack[] { chickResource }
+                new ItemStack[] {chicken},
+                new ItemStack[] {chickResource}
             );
             if (!InvUtils.fitAll(menu.toInventory(), recipe.getOutput(), getOutputSlots())) {
                 continue;

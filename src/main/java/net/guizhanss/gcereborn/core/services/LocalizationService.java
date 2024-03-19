@@ -1,5 +1,6 @@
 package net.guizhanss.gcereborn.core.services;
 
+import java.io.File;
 import java.text.MessageFormat;
 
 import javax.annotation.Nonnull;
@@ -8,19 +9,40 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import com.google.common.base.Preconditions;
 
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 import net.guizhanss.gcereborn.GeneticChickengineering;
+import net.guizhanss.gcereborn.utils.FileUtils;
 import net.guizhanss.guizhanlib.minecraft.utils.ChatUtil;
 import net.guizhanss.guizhanlib.slimefun.addon.SlimefunLocalization;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.TextComponent;
 
 @SuppressWarnings("ConstantConditions")
 public final class LocalizationService extends SlimefunLocalization {
-    public LocalizationService(GeneticChickengineering plugin) {
+    private static final String FOLDER_NAME = "lang";
+    private final GeneticChickengineering plugin;
+    private final File jarFile;
+
+    @ParametersAreNonnullByDefault
+    public LocalizationService(GeneticChickengineering plugin, File jarFile) {
         super(plugin);
+        this.plugin = plugin;
+        this.jarFile = jarFile;
+        extractTranslations();
+    }
+
+    private void extractTranslations() {
+        final File translationsFolder = new File(plugin.getDataFolder(), FOLDER_NAME);
+        if (!translationsFolder.exists()) {
+            translationsFolder.mkdirs();
+        }
+        var translationFiles = FileUtils.listYmlFilesInJar(jarFile, FOLDER_NAME);
+        for (String translationFile : translationFiles) {
+            String filePath = FOLDER_NAME + File.separator + translationFile;
+            File file = new File(plugin.getDataFolder(), filePath);
+            if (file.exists()) {
+                continue;
+            }
+            plugin.saveResource(filePath, true);
+        }
     }
 
     @ParametersAreNonnullByDefault
@@ -34,17 +56,10 @@ public final class LocalizationService extends SlimefunLocalization {
         Preconditions.checkArgument(sender != null, "CommandSender cannot be null");
         Preconditions.checkArgument(messageKey != null, "Message key cannot be null");
 
-        ChatUtil.send(sender, MessageFormat.format(getString("messages." + messageKey), args));
-    }
-
-    @ParametersAreNonnullByDefault
-    public void sendActionbarMessage(Player p, String messageKey, Object... args) {
-        Preconditions.checkArgument(p != null, "Player cannot be null");
-        Preconditions.checkArgument(messageKey != null, "Message key cannot be null");
-
-        String message = MessageFormat.format(getString("messages." + messageKey), args);
-
-        BaseComponent[] components = TextComponent.fromLegacyText(ChatUtil.color(message));
-        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, components);
+        if (GeneticChickengineering.getIntegrationService().isSlimefunTranslationEnabled()) {
+            GeneticChickengineering.getIntegrationService().sendMessage(sender, messageKey, args);
+        } else {
+            ChatUtil.send(sender, MessageFormat.format(getString("messages." + messageKey), args));
+        }
     }
 }

@@ -54,8 +54,8 @@ public class GeneticSequencer extends AbstractMachine {
             }
             MachineRecipe recipe = new MachineRecipe(
                 config.isTest() ? 1 : 30,
-                new ItemStack[] { chicken },
-                new ItemStack[] { learnedChicken }
+                new ItemStack[] {chicken},
+                new ItemStack[] {learnedChicken}
             );
             if (!InvUtils.fitAll(menu.toInventory(), recipe.getOutput(), getOutputSlots())) {
                 continue;
