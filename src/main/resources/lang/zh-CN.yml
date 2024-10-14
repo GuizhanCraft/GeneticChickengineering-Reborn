@@ -75,6 +75,11 @@ items:
     name: "&e休息室"
     lore:
       - "&7可以治疗鸡。"
+  GROWTH_CHAMBER:
+    name: "&e成长室"
+    lore:
+      - "&7可以使用小麦种子"
+      - "&7培育幼年鸡。"
 lores:
   right-click-to-use: "&e右键点击&7以使用"
   chicken:
