@@ -12,10 +12,10 @@ public final class RecipeTypes {
 
     public static final RecipeType FROM_NET = GeneticChickengineering.getLocalization().getRecipeType(
         "from_net",
-        GCEItems.CHICKEN_NET
+        GCEItems.CHICKEN_NET.item()
     );
     public static final RecipeType FROM_CHICKEN = GeneticChickengineering.getLocalization().getRecipeType(
         "from_chicken",
-        GCEItems.EXCITATION_CHAMBER
+        GCEItems.EXCITATION_CHAMBER.item()
     );
 }

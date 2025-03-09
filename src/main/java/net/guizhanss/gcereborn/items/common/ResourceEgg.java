@@ -42,7 +42,7 @@ public class ResourceEgg extends SimpleSlimefunItem<ItemUseHandler> implements N
     @Nonnull
     private static ItemStack[] makeRecipe(@Nonnull Material resource) {
         ItemStack[] recipe = new ItemStack[9];
-        ItemStack fake = GCEItems.POCKET_CHICKEN.clone();
+        ItemStack fake = GCEItems.POCKET_CHICKEN.item();
         DNA dna;
         if (resource == Material.WATER) {
             dna = new DNA(62);

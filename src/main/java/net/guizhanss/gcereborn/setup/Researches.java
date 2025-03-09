@@ -20,18 +20,18 @@ public final class Researches {
 
     public static void setup() {
         MAIN.addItems(
-            GCEItems.POCKET_CHICKEN,
-            GCEItems.CHICKEN_NET,
-            GCEItems.WATER_EGG,
-            GCEItems.LAVA_EGG,
-            GCEItems.GENETIC_SEQUENCER,
-            GCEItems.EXCITATION_CHAMBER,
-            GCEItems.EXCITATION_CHAMBER_2,
-            GCEItems.EXCITATION_CHAMBER_3,
-            GCEItems.PRIVATE_COOP
+            GCEItems.POCKET_CHICKEN.item(),
+            GCEItems.CHICKEN_NET.item(),
+            GCEItems.WATER_EGG.item(),
+            GCEItems.LAVA_EGG.item(),
+            GCEItems.GENETIC_SEQUENCER.item(),
+            GCEItems.EXCITATION_CHAMBER.item(),
+            GCEItems.EXCITATION_CHAMBER_2.item(),
+            GCEItems.EXCITATION_CHAMBER_3.item(),
+            GCEItems.PRIVATE_COOP.item()
         );
         if (GeneticChickengineering.getConfigService().isPainEnabled()) {
-            MAIN.addItems(GCEItems.RESTORATION_CHAMBER);
+            MAIN.addItems(GCEItems.RESTORATION_CHAMBER.item());
         }
 
         MAIN.register();

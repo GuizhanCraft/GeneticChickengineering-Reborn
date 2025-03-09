@@ -28,7 +28,7 @@ public class GeneticSequencer extends AbstractMachine {
     @Override
     @Nonnull
     public ItemStack getProgressBar() {
-        return GCEItems.POCKET_CHICKEN.clone();
+        return GCEItems.POCKET_CHICKEN.item();
     }
 
     @Override

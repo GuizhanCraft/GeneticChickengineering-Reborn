@@ -89,7 +89,7 @@ public final class ChickenUtils {
     public static ItemStack capture(@Nonnull Chicken chicken) {
         GeneticChickengineering.getIntegrationService().captureChicken(chicken);
         JsonObject json = PocketChicken.ADAPTER.saveData(chicken);
-        ItemStack item = GCEItems.POCKET_CHICKEN.clone();
+        ItemStack item = GCEItems.POCKET_CHICKEN.item();
 
         DNA dna;
         String uuid = chicken.getUniqueId().toString();
@@ -153,7 +153,7 @@ public final class ChickenUtils {
      * @param typing The type of chicken.
      */
     public static void createProductDisplay(int typing) {
-        ItemStack fake = GCEItems.POCKET_CHICKEN.clone();
+        ItemStack fake = GCEItems.POCKET_CHICKEN.item();
         DNA dna = new DNA(typing);
         String productRawName = ChickenTypes.getName(typing);
         setPocketChicken(fake, null, dna);
@@ -193,7 +193,7 @@ public final class ChickenUtils {
     public static ItemStack fromDNA(@Nonnull DNA dna, boolean isBaby) {
         JsonObject json = getChickenJson(isBaby);
 
-        ItemStack item = GCEItems.POCKET_CHICKEN.clone();
+        ItemStack item = GCEItems.POCKET_CHICKEN.item();
         setPocketChicken(item, json, dna);
         return item;
     }

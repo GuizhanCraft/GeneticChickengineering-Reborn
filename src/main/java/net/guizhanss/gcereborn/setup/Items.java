@@ -67,7 +67,7 @@ public final class Items {
             new ItemStack[] {
                 new ItemStack(Material.OAK_PLANKS), null, new ItemStack(Material.OAK_PLANKS),
                 new ItemStack(Material.COBBLESTONE), new ItemStack(Material.OBSERVER), new ItemStack(Material.COBBLESTONE),
-                new ItemStack(Material.COBBLESTONE), SlimefunItems.ADVANCED_CIRCUIT_BOARD, new ItemStack(Material.COBBLESTONE)
+                new ItemStack(Material.COBBLESTONE), SlimefunItems.ADVANCED_CIRCUIT_BOARD.item(), new ItemStack(Material.COBBLESTONE)
             }
         ).setCapacity(180).setEnergyConsumption(3).setProcessingSpeed(1).register(plugin);
 
@@ -76,9 +76,9 @@ public final class Items {
             GCEItems.EXCITATION_CHAMBER,
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
-                new ItemStack(Material.BLACKSTONE), SlimefunItems.SMALL_CAPACITOR, new ItemStack(Material.BLACKSTONE),
+                new ItemStack(Material.BLACKSTONE), SlimefunItems.SMALL_CAPACITOR.item(), new ItemStack(Material.BLACKSTONE),
                 new ItemStack(Material.CHAIN), null, new ItemStack(Material.CHAIN),
-                new ItemStack(Material.STONE), SlimefunItems.ELECTRIC_MOTOR, new ItemStack(Material.STONE)
+                new ItemStack(Material.STONE), SlimefunItems.ELECTRIC_MOTOR.item(), new ItemStack(Material.STONE)
             }
         ).setCapacity(250).setEnergyConsumption(5).setProcessingSpeed(1).register(plugin);
 
@@ -87,9 +87,9 @@ public final class Items {
             GCEItems.EXCITATION_CHAMBER_2,
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
-                SlimefunItems.LEAD_INGOT, SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.LEAD_INGOT,
-                SlimefunItems.BLISTERING_INGOT_3, GCEItems.EXCITATION_CHAMBER, SlimefunItems.BLISTERING_INGOT_3,
-                SlimefunItems.LEAD_INGOT, SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.LEAD_INGOT
+                SlimefunItems.LEAD_INGOT.item(), SlimefunItems.BLISTERING_INGOT_3.item(), SlimefunItems.LEAD_INGOT.item(),
+                SlimefunItems.BLISTERING_INGOT_3.item(), GCEItems.EXCITATION_CHAMBER.item(), SlimefunItems.BLISTERING_INGOT_3.item(),
+                SlimefunItems.LEAD_INGOT.item(), SlimefunItems.BLISTERING_INGOT_3.item(), SlimefunItems.LEAD_INGOT.item()
             }
         ).setCapacity(1000).setEnergyConsumption(10).setProcessingSpeed(2).register(plugin);
 
@@ -98,9 +98,9 @@ public final class Items {
             GCEItems.EXCITATION_CHAMBER_3,
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[] {
-                SlimefunItems.MAGIC_LUMP_3, SlimefunItems.NUCLEAR_REACTOR, SlimefunItems.MAGIC_LUMP_3,
-                SlimefunItems.REINFORCED_PLATE, GCEItems.EXCITATION_CHAMBER_2, SlimefunItems.REINFORCED_PLATE,
-                SlimefunItems.MAGIC_LUMP_3, SlimefunItems.URANIUM, SlimefunItems.MAGIC_LUMP_3
+                SlimefunItems.MAGIC_LUMP_3.item(), SlimefunItems.NUCLEAR_REACTOR.item(), SlimefunItems.MAGIC_LUMP_3.item(),
+                SlimefunItems.REINFORCED_PLATE.item(), GCEItems.EXCITATION_CHAMBER_2.item(), SlimefunItems.REINFORCED_PLATE.item(),
+                SlimefunItems.MAGIC_LUMP_3.item(), SlimefunItems.URANIUM.item(), SlimefunItems.MAGIC_LUMP_3.item()
             }
         ).setCapacity(5000).setEnergyConsumption(50).setProcessingSpeed(10).register(plugin);
 
@@ -111,7 +111,7 @@ public final class Items {
             new ItemStack[] {
                 new ItemStack(Material.BIRCH_PLANKS), new ItemStack(Material.BIRCH_PLANKS), new ItemStack(Material.BIRCH_PLANKS),
                 new ItemStack(Material.JUKEBOX), new ItemStack(Material.RED_BED), new ItemStack(Material.POPPY),
-                new ItemStack(Material.BIRCH_PLANKS), SlimefunItems.HEATING_COIL, new ItemStack(Material.BIRCH_PLANKS)
+                new ItemStack(Material.BIRCH_PLANKS), SlimefunItems.HEATING_COIL.item(), new ItemStack(Material.BIRCH_PLANKS)
             }
         ).setCapacity(30).setEnergyConsumption(1).setProcessingSpeed(1).register(plugin);
 
@@ -122,8 +122,8 @@ public final class Items {
                 RecipeType.ENHANCED_CRAFTING_TABLE,
                 new ItemStack[] {
                     new ItemStack(Material.PINK_TERRACOTTA), new ItemStack(Material.PINK_TERRACOTTA), new ItemStack(Material.PINK_TERRACOTTA),
-                    SlimefunItems.BANDAGE, new ItemStack(Material.WHITE_BED), SlimefunItems.MEDICINE,
-                    new ItemStack(Material.PINK_TERRACOTTA), SlimefunItems.HEATING_COIL, new ItemStack(Material.PINK_TERRACOTTA)
+                    SlimefunItems.BANDAGE.item(), new ItemStack(Material.WHITE_BED), SlimefunItems.MEDICINE.item(),
+                    new ItemStack(Material.PINK_TERRACOTTA), SlimefunItems.HEATING_COIL.item(), new ItemStack(Material.PINK_TERRACOTTA)
                 }
             ).setCapacity(30).setEnergyConsumption(2).setProcessingSpeed(1).register(plugin);
         }
@@ -134,9 +134,9 @@ public final class Items {
                 GCEItems.GROWTH_CHAMBER,
                 RecipeType.ENHANCED_CRAFTING_TABLE,
                 new ItemStack[] {
-                    SlimefunItems.GOLD_24K, SlimefunItems.TIN_CAN, SlimefunItems.GOLD_24K,
-                    SlimefunItems.ELECTRIC_MOTOR, new ItemStack(Material.HAY_BLOCK), SlimefunItems.ELECTRIC_MOTOR,
-                    SlimefunItems.LEAD_INGOT, SlimefunItems.FOOD_FABRICATOR, SlimefunItems.LEAD_INGOT
+                    SlimefunItems.GOLD_24K.item(), SlimefunItems.TIN_CAN.item(), SlimefunItems.GOLD_24K.item(),
+                    SlimefunItems.ELECTRIC_MOTOR.item(), new ItemStack(Material.HAY_BLOCK), SlimefunItems.ELECTRIC_MOTOR.item(),
+                    SlimefunItems.LEAD_INGOT.item(), SlimefunItems.FOOD_FABRICATOR.item(), SlimefunItems.LEAD_INGOT.item()
                 }
             ).setCapacity(200).setEnergyConsumption(20).setProcessingSpeed(1).register(plugin);
         }

@@ -18,7 +18,7 @@ public final class Groups {
         GeneticChickengineering.getLocalization().getItemGroupItem(
             "ICON",
             Heads.CHICKEN.getTexture()
-        )
+        ).item()
     );
 
     public static final ItemGroup DICTIONARY = new ItemGroup(
@@ -26,6 +26,6 @@ public final class Groups {
         GeneticChickengineering.getLocalization().getItemGroupItem(
             "DIRECTORY_ICON",
             Material.BLAST_FURNACE
-        )
+        ).item()
     );
 }
