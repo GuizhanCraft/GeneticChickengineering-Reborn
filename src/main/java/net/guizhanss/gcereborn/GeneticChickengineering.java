@@ -141,12 +141,12 @@ public class GeneticChickengineering extends AbstractAddon {
         } else if (getPluginVersion().startsWith("Build")) {
             try {
                 // use updater in lib plugin
-                Class<?> clazz = Class.forName("net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater");
+                Class<?> clazz = Class.forName("net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater");
                 Method updaterStart = clazz.getDeclaredMethod("start", Plugin.class, File.class, String.class, String.class, String.class);
                 updaterStart.invoke(null, this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
             } catch (Exception ignored) {
                 // use updater in lib
-                new GuizhanBuildsUpdater(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch()).start();
+                GuizhanBuildsUpdater.start(this, getFile(), getGithubUser(), getGithubRepo(), getGithubBranch());
             }
         }
     }
