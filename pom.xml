@@ -161,7 +161,7 @@
         <dependency>
             <groupId>com.bgsoftware</groupId>
             <artifactId>WildStackerAPI</artifactId>
-            <version>2024.4</version>
+            <version>2025.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
